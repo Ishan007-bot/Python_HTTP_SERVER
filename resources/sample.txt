@@ -1,0 +1,4 @@
+This is another text file for testing multiple downloads.
+Keep-Alive and binary transfer should work properly.
+
+You can view it by visiting : http://127.0.0.1:8080
