@@ -125,7 +125,7 @@ Open your browser and test the following default URLs:
 # Test successful JSON POST and 201 Created response
 curl -X POST http://127.0.0.1:8080/upload \
      -H "Content-Type: application/json" \
-     -d '{"name":"Ashmit","score":100}'
+     -d '{"name":"Ishan","score":100}'
 
 # Test Path Traversal Protection (Expected: 403 Forbidden)
 curl -i http://127.0.0.1:8080/../server.py
@@ -134,7 +134,7 @@ curl -i http://127.0.0.1:8080/../server.py
 **Windows PowerShell (using Invoke-RestMethod):**
 ```powershell
 # Test successful JSON POST and 201 Created response
-Invoke-RestMethod -Uri http://127.0.0.1:8080/upload -Method POST -Body '{"name":"Ashmit","score":100}' -ContentType "application/json"
+Invoke-RestMethod -Uri http://127.0.0.1:8080/upload -Method POST -Body '{"name":"Ishan","score":100}' -ContentType "application/json"
 ```
 
 ---
@@ -172,4 +172,5 @@ The server provides comprehensive, time-stamped logging to the console:
 ## Author
 
 Ishan Ganguly
+
 Roll No - 24BCS10330
