@@ -3,37 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Python Server</title>
-    <style>body { font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      color: #7d2525;
-      text-align: center;
-      padding: 50px;
-    }
-    a {
-      display: block;
-      margin: 10px;
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }</style>
+    <title>[SERVER STATUS] Operational</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font fallback for a techy look */
+        body {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        /* Gradient for the main container */
+        .console-container {
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 255, 0.2), 0 4px 6px -2px rgba(0, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <h1>Welcome to my Simple Multi-threaded HTTP Server Project </h1>
-    <h2>This page confirms HTML file serving </h2>
-    <p>Available links to test different server functions:</p>
-    <ul>
-        <li><a href="/about.html">About </a></li>
-        <li><a href="/contact.html">Contact </a></li>
-        <li><a href="/sample.txt">Download Sample Text </a></li>
-        <li><a href="/sample1.txt">Download 2nd Sample Text </a></li>
-        <li><a href="/logo.jpg">Download 1st Logo (JPEG)</a></li>
-        <li><a href="/logo1.jpg">Download 2nd Logo (JPEG)</a></li>
-        <li><a href="/photo.png">Download 1st Photo (PNG)</a></li>
-        <li><a href="/photo1.png">Download 2nd Photo (PNG)</a></li>
-        <li><a href="/nonexistent.html">Test 404 Not Found</a></li>
-    </ul>
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="console-container bg-gray-800 p-8 md:p-12 rounded-lg w-full max-w-2xl border-2 border-cyan-500/50">
+
+        <!-- Header Block -->
+        <header class="pb-6 border-b border-gray-700 mb-6">
+            <div class="text-xs text-cyan-400 font-bold uppercase tracking-widest">
+                [SYSTEM LOG] 0x0001 INITIATED
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mt-2 text-white">
+                Multi-threaded HTTP Server Project
+            </h1>
+            <p class="text-lg text-green-400 mt-2">
+                <span class="text-cyan-400">$ ></span> Server Status: OPERATIONAL (200 OK)
+            </p>
+        </header>
+
+        <!-- Description/Instructions -->
+        <section class="mb-8 p-4 bg-gray-900 rounded-md border border-gray-700">
+            <h2 class="text-xl font-semibold mb-3 text-cyan-300">$ CORE_FUNCTIONS.AVAILABLE</h2>
+            <p class="text-sm text-gray-400 leading-relaxed">
+                This interface confirms static HTML rendering. Use the paths below to rigorously test concurrency, binary transfer integrity, persistence, and security logic.
+            </p>
+        </section>
+
+        <!-- Link List -->
+        <ul class="space-y-3">
+            <!-- HTML LINKS -->
+            <li class="p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-150">
+                <a href="/about.html" class="flex justify-between items-center text-white">
+                    <span class="text-yellow-400">[HTML_RENDER]</span>
+                    <span>/about.html</span>
+                    <span class="text-xs text-gray-400">View Page</span>
+                </a>
+            </li>
+            <li class="p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-150">
+                <a href="/contact.html" class="flex justify-between items-center text-white">
+                    <span class="text-yellow-400">[HTML_RENDER]</span>
+                    <span>/contact.html</span>
+                    <span class="text-xs text-gray-400">View Page</span>
+                </a>
+            </li>
+
+            <!-- TEXT DOWNLOADS (Binary Transfer) -->
+            <li class="p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-150">
+                <a href="/sample.txt" class="flex justify-between items-center text-white">
+                    <span class="text-purple-400">[BINARY_TX]</span>
+                    <span>/sample.txt</span>
+                    <span class="text-xs text-gray-400">Download</span>
+                </a>
+            </li>
+            <li class="p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-150">
+                <a href="/sample1.txt" class="flex justify-between items-center text-white">
+                    <span class="text-purple-400">[BINARY_TX]</span>
+                    <span>/sample1.txt</span>
+                    <span class="text-xs text-gray-400">Download</span>
+                </a>
+            </li>
+
+            <!-- IMAGE DOWNLOADS (Binary Transfer) -->
+            <li class="p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-150">
+                <a href="/logo.jpg" class="flex justify-between items-center text-white">
+                    <span class="text-teal-400">[IMAGE_TX]</span>
+                    <span>/logo.jpg (JPEG)</span>
+                    <span class="text-xs text-gray-400">Download</span>
+                </a>
+            </li>
+            <li class="p-3 bg-gray-700 rounded-md hover:bg-gray-600 transition duration-150">
+                <a href="/photo.png" class="flex justify-between items-center text-white">
+                    <span class="text-teal-400">[IMAGE_TX]</span>
+                    <span>/photo.png (PNG, Large File Test)</span>
+                    <span class="text-xs text-gray-400">Download</span>
+                </a>
+            </li>
+
+            <!-- ERROR TEST -->
+            <li class="p-3 bg-red-800 rounded-md hover:bg-red-700 transition duration-150 mt-5">
+                <a href="/nonexistent.html" class="flex justify-between items-center text-white font-bold">
+                    <span class="text-red-300">[ERROR_TEST]</span>
+                    <span>/nonexistent.html</span>
+                    <span class="text-xs text-red-300">Expect 404</span>
+                </a>
+            </li>
+        </ul>
+
+        <footer class="mt-8 pt-4 border-t border-gray-700 text-xs text-gray-500">
+            &copy; 2025 - Network Programming Assignment - Socket Server Architecture
+        </footer>
+    </div>
+
 </body>
 </html>

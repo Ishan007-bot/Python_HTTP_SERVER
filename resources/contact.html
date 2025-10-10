@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact :: System Access</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font fallback for a techy look */
+        body {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+        /* Gradient for the main container */
+        .console-container {
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 255, 0.2), 0 4px 6px -2px rgba(0, 255, 255, 0.1);
+        }
+    </style>
 </head>
-<body style="font-family: Arial; text-align: center;">
-    <h1>Contact Information</h1>
-    <p>You can reach the developer of this project at:</p>
-    <P><strong>ishanganguly10a12@gmail.com</strong></P>
-    <p> Phn No : 7044797798 </p>
-    <p><a href="/">Back to Home</a></p>
+<body class="bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="console-container bg-gray-800 p-8 md:p-12 rounded-lg w-full max-w-xl border-2 border-cyan-500/50 text-left">
+
+        <!-- Header Block -->
+        <header class="pb-6 border-b border-gray-700 mb-6">
+            <div class="text-xs text-cyan-400 font-bold uppercase tracking-widest">
+                [SYSTEM LOG] REQUEST FOR ACCESS
+            </div>
+            <h1 class="text-3xl font-bold mt-2 text-white">
+                Contact Data Dump
+            </h1>
+        </header>
+
+        <!-- Content Block -->
+        <section class="space-y-4">
+            <p class="text-lg text-green-400">
+                <span class="text-cyan-400">$ ></span> Access granted to developer contact information.
+            </p>
+
+            <div class="p-4 bg-gray-900 rounded-md border border-gray-700">
+                <h3 class="text-lg font-semibold text-cyan-300 mb-2">Email Address:</h3>
+                <p class="text-xl text-yellow-400 font-bold">ishanganguly10a12@gmail.com</p>
+            </div>
+
+            <div class="p-4 bg-gray-900 rounded-md border border-gray-700">
+                <h3 class="text-lg font-semibold text-cyan-300 mb-2">Phone Number:</h3>
+                <p class="text-xl text-yellow-400 font-bold">7044797798</p>
+            </div>
+
+            <p class="mt-6 text-sm text-gray-400 italic">
+                Note: This information is for testing purposes only.
+            </p>
+        </section>
+
+        <!-- Navigation -->
+        <footer class="mt-8 pt-4 border-t border-gray-700">
+            <a href="/" class="text-md text-purple-400 hover:text-purple-300 transition duration-150 block text-center">
+                &lt;&lt; RETURN TO ROOT DIRECTORY
+            </a>
+        </footer>
+    </div>
+
 </body>
 </html>
